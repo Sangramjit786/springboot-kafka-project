@@ -10,7 +10,13 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic javaguidesTopic(){
-        return TopicBuilder.name("kafka_consumer_topic")
+        return TopicBuilder.name("kafka_producer_topic")
+                .build();
+    }
+
+    @Bean
+    public NewTopic javaguidesJspnTopic(){
+        return TopicBuilder.name("kafka_producer_json_topic")
                 .build();
     }
 }
